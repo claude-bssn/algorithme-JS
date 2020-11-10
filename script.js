@@ -83,10 +83,10 @@ let episode = { // Pour créer des objets on utilise des accolades
 let episodeTitle1 = episode.title; // point/clé
 let epidsodeDuration1 = episode.duration;
 console.log("episodeTitle1 " + episodeTitle1);
-console.log("episodeDuration1 " + epidsodeDuration1 + " minutes")
+console.log("episodeDuration1 " + epidsodeDuration1 + " minutes");
 
 // exo class
-class Episode {  // créer un class permet de créer un model afin de gagner du temps 
+class Episode {  // créer une class permet de créer un model afin de gagner du temps sur la céation d'objets 
     constructor(title, duration, hasBeenWatched) 
     {
     this.title = title;
@@ -128,6 +128,136 @@ let catalog = [
      secondPlante.name, 
      thirdPlante.name 
 ];
-catalog.push("fosythia");
-console.log(catalog)
+catalog.push("Fosythia");
+catalog.push("Chaenomeles");
+
+console.log(catalog); // pour que les résultats soient indiqués dans la console les variables doivent être placés avant ceux-ci. ordre d'interogation 
+
+let howManyReference = catalog.length;
+console.log(howManyReference);
+ // mise en application de l'instruction switch
+switch (firstPlante.evergreen)
+{
+  case true : 
+      console.log("evergreen");
+      break;
+  case false :
+      console.log("deciduous");
+      break;
+}
+
+// mise en application de la boucle for... in
+for(let i in catalog)
+{
+  console.log('plante ' + catalog[i]);
+}
+
+
+
+
+
+
+
+// exo set 
+
+const player = new Set(['Joe','Jhon','Jim','Jule']); // ici on a besion de la majuscule à Set pour que ça fonctionne.
+player.add('Franck');
+// player .add('Joe'); // on ne peut pas ajouter dex fois la même entrée 
+
+console.log(player.has('Jule')); // true
+console.log(player.has('Marc')); //false
+console.log(player.size);
+for (let item of player) console.log(item); // Pour lister tous les éléments du set player.
+for (let item of player.keys()) console.log(item);
+
+//Cf résultat du quizz
+
+// exo boolean
+// let userLoggedIn = true;
+// // userLoggedIn = false; 
+// if(userLoggedIn) 
+// {
+//   console.log('Utilisateur connecté!');
+// }
+// else
+// {
+//   console.log("Alerte, intrus!");
+// } 
+
+// //exo 
+// class Episode {
+//   constructor(title, duration, minutesWatched) {
+//     this.title = title;
+//     this.duration = duration;
+//     // Add logic here
+//     // ======================
+//     let watchedText = true;
+//     this.continueWatching = true;
+//     if( minutesWatched === 0)
+//       {
+//         this.watchedText = 'Pas encore regardé';
+//         this.continueWatching = false;
+//       }
+//     else if (minutesWatched < duration )
+//       {
+//         this.watchedText = 'En train de regarder';
+//         this.continueWatching = true;
+//       }
+//     else
+//       {
+//         this.watchedText = 'Déjà regardé';
+//         this.continueWatching = false;
+//       }
+//     }
+//   }
+
+// mise en application de if/else
+let userLoggedIn = true;
+let welcomeMessage = '';
+if (userLoggedIn) 
+{
+     welcomeMessage = 'Welcome back!';
+} else 
+{
+     welcomeMessage = 'Welcome new user!';
+}
+
+console.log(welcomeMessage);
+// mise en application de la boucle for 
+let numberOfPassengers = 10;
+for (let i = 0 ; i < numberOfPassengers ; i++)
+{
+  console.log('Passager embarqué !')
+}
+console.log('Tous les passagés ont embarqué.')
+// mise en pratique de for...in 2
+const passengers = [
+  "will alexender",
+  "Sarah Kate",
+  "Audrey Simon",
+  "Tao Perkington"
+]
+passengers.push="Micheline Pouette" 
+for (let i in passengers)
+{
+  console.log(" Embarquement du passager "+ passengers[i]);
+}
+
+
+// Mise en application de for...of
+const ingredients =[
+  "farine",
+  "lait",
+  "beurre",
+  "oeuf",
+  "sel"
+] 
+for (let ingredient of ingredients)
+{
+  console.log( " L'ingrédient "+ ingredient+ " à été ajouté")
+}
+console.log("Tous les ingrédients sont dans le bol!")
+
+// Mise en applkication de while 
+let seatsLeft
 
