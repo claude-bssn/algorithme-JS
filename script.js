@@ -11,7 +11,7 @@ console.log("totalMusic: " + totalMusic );
 let cookiesInJar = 10;
 cookiesInJar -= 2;
 cookiesInJar += 12;
-// ici on utilise -= et += pour réaliser un calcule et remplacer la valeur de la variable par le résultat de l'opération.
+// ici on utilise -= et += pour réaliser un calcul et remplacer la valeur de la variable par le résultat de l'opération.
 
 console.log("cookiesInJar: " + cookiesInJar)
 
@@ -258,6 +258,26 @@ for (let ingredient of ingredients)
 }
 console.log("Tous les ingrédients sont dans le bol!")
 
-// Mise en applkication de while 
-let seatsLeft
+// Mise en application de while 
+let seatsLeft = 10;
+let passengersStillBoard = 8;
 
+let passengersBoarded = 0;
+
+while (seatsLeft > 0 && passengersStillBoard > 0)
+{
+  passengersBoarded++;
+  seatsLeft--;
+  passengersStillBoard--;
+}
+console.log(passengersBoarded);
+
+let riders = 0;
+while (riders < 10)
+{
+  riders++;
+  console.log("End of turn for rider " + (riders));
+}
+
+
+// pour l'utilisation des switch et des break cf Doc 'switch et utilisation des break'
